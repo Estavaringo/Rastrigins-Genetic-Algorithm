@@ -214,31 +214,6 @@ def main():
         best_list.append(population[SIZE_OF_POPULATION - 1].fitness)
 
 
-        # z, y = get_chromosome_value(population[SIZE_OF_POPULATION - 1])
-        # print("Average fitness: " + str(average_fitness))
-        # print()
-        # print("Melhor individuo:")
-        # print("Function result: " + str(population[SIZE_OF_POPULATION - 1].rastrigins))
-        # print("Fitness: " + str(population[SIZE_OF_POPULATION - 1].fitness))
-        # print("Chance: " + str(population[SIZE_OF_POPULATION - 1].chance))
-        # print("Chromosome X: " + str(z))
-        # print("Chromosome Y: " + str(y))
-        # print()
-
-
-        # for individual in population:
-        #     print()
-        #     print()
-        #     x, y = get_chromosome_value(individual)
-        #
-        #     print("Fitness: " + str(individual.fitness))
-        #     print("Rank Fitness: " + str(individual.fitness_by_rank))
-        #     print("Chance: " + str(individual.chance))
-        #     print("Chromosome X: " + str(x))
-        #     print("Chromosome Y: " + str(y))
-        #     print("Function result: " + str(individual.rastrigins))
-        #     print(individual.chromosome)
-
         if x != NUMBER_OF_ITERATIONS - 1:
             population = generate_new_population(population)
 
@@ -256,9 +231,6 @@ def main():
         print("Chance: " + str(individual.chance))
         print(individual.chromosome)
 
-
-    # print("Best Generation: " + str(best_generation))
-    # print("Best Function Result: " + str(best_function_result))
 
     plot_performance(best_list, avg_list, best_generation, best_fitness)
 
